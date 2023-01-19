@@ -3,6 +3,7 @@
 const nextConfig ={
   reactStrictMode: true,
   experimental: { appDir: false },
+  output: 'standalone',
   async redirects() {
     return [
       {
