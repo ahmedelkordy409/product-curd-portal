@@ -1,0 +1,31 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["nativeTypes"]
+
+}
+
+
+model Product {
+  id             String   @id @default(uuid())
+  name           String   @unique
+  description    String
+  category       String
+
+  price          Decimal	@db.Money
+  sale_price     Decimal	@db.Money
+
+  sku            String  
+
+  barcode        String   
+
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@map(name: "product")
+}
+
