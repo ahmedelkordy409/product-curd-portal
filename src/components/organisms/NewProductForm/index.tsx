@@ -264,7 +264,7 @@ export default function NewProductForm({
                 variant="solid"
                 {...register('sku')}
                 disabled={true}
-                error={errors.description?.message as string}
+                error={errors.sku?.message as string}
               />
 
 
@@ -274,7 +274,7 @@ export default function NewProductForm({
                 variant="solid"
                 {...register('barcode')}
                 disabled={true}
-                error={errors.description?.message as string}
+                error={errors.barcode?.message as string}
               />
         </FormFieldGroup>
       </Card>
