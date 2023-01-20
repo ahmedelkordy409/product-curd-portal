@@ -38,7 +38,7 @@ export const COLUMNS = [
       accessor: 'price',
   },
   {
-    Header: 'Sale',
+    Header: 'Sku',
     accessor: 'sku',
   },
 ];
